@@ -1,0 +1,13 @@
+<!-- app/templates/posts.hbs -->
+<h1>Expert Advice</h1>
+<h5>Question</h5>
+<h2>{{model.title}}</h2>
+<h6>{{model.description}}</h6>
+<a href="/posts/{{model.slug}}/edit">Edit Post</a>
+<h2>Answers</h2>
+
+{{#each model.answers as |answer|}}
+  <p>{{answer.description}}</p>
+{{/each}}
+<Answers @post={{model}} />
+

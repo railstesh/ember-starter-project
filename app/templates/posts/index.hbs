@@ -1,0 +1,18 @@
+ <!-- app/templates/posts.hbs -->
+ <h1>Expert Advice</h1>
+ <h5>Get answers to difficutl questions </h5>
+ <input type="text" name="search" placeholder="Search..">
+ <a href="/posts/new">Ask a question</a>
+
+ <table class="table table-bordered table-striped">
+   <thead>
+     <th>Questions</th>
+   </thead>
+   <tbody>
+     {{#each model as |post|}}
+       <tr>
+         <td><a href="/posts/{{post.slug}}">{{post.title}}</a></td>
+       </tr>
+     {{/each}}
+   </tbody>
+ </table>
